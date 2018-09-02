@@ -1,0 +1,8 @@
+# Byte-compiled files
+__pycache__/
+
+# Unit test / coverage reports
+.pytest_cache/
+
+# Environments
+venv/
