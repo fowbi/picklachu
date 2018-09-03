@@ -11,4 +11,4 @@ lint:
 	[[ -z "$(VIRTUAL_ENV)" ]] && pipenv run flake8 $(files) || flake8 $(files)
 
 lint-fix:
-	[ -z "$(VIRTUAL_ENV)" ] && pipenv run yapf -ir $(files) || flake8 -ir $(files)
+	[ -z "$(VIRTUAL_ENV)" ] && pipenv run yapf -ir $(files) || yapf -ir $(files)
