@@ -5,4 +5,10 @@ env:
 	pipenv shell
 
 run_tests:
-	pipenv run pytest
+	[ -z "$(VIRTUAL_ENV)" ] && pipenv run pytest || pytest
+
+lint:
+	[[ -z "$(VIRTUAL_ENV)" ]] && pipenv run flake8 $(files) || flake8 $(files)
+
+lint-fix:
+	[ -z "$(VIRTUAL_ENV)" ] && pipenv run yapf -ir $(files) || flake8 -ir $(files)
