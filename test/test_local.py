@@ -6,6 +6,7 @@ from picklachu.storage.local import Local
 
 def set_up_tmp(func):
     """Set up tmp folder"""
+
     def wrapper():
         if not os.path.isdir('tmp/'):
             os.mkdir('tmp')
@@ -23,7 +24,7 @@ def test_local_storage():
         os.mkdir('tmp')
 
     local = Local(directory='tmp/')
-    local.persist(path='foobar.pickle', data=pickle.dumps({'foo':'bar'}))
+    local.persist(path='foobar.pickle', data=pickle.dumps({'foo': 'bar'}))
 
     assert os.path.isfile('tmp/foobar.pickle')
 
@@ -34,7 +35,7 @@ def test_local_storage():
 def test_local_retrieve():
     """Test retrieving the stored data from the local file system"""
     local = Local(directory='tmp/')
-    local.persist(path='foobar.pickle', data=pickle.dumps({'foo':'bar'}))
+    local.persist(path='foobar.pickle', data=pickle.dumps({'foo': 'bar'}))
 
     response = local.retrieve(path="foobar.pickle")
 

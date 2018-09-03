@@ -17,8 +17,8 @@ Persisting data:
 ```
 from picklachu import Picklachu
 
-picklachu = Picklachu(LocalStorage('/tmp/'))
-picklachu.i_pick_you({'foo':'bar'}, 'foobar')
+with Picklachu(LocalStorage('/tmp/')) as picklachu:
+    picklachu.i_pick_you({'foo':'bar'}, 'foobar')
 ```
 
 Retrieving data:
@@ -26,6 +26,6 @@ Retrieving data:
 ```
 from picklachu import Picklachu
 
-picklachu = Picklachu(LocalStorage('/tmp/'))
-picklachu.evolve('foobar') #  will return {'foo', 'bar'}
+with Picklachu(LocalStorage('/tmp/')) as picklachu:
+    picklachu.evolve('foobar') #  will return {'foo', 'bar'}
 ```
