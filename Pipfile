@@ -10,6 +10,7 @@ name = "pypi"
 pytest = "*"
 mock = "*"
 "flake8" = "*"
+yapf = "*"
 
 [requires]
 python_version = "3.7"
