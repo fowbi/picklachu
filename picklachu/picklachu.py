@@ -10,9 +10,9 @@ class Picklachu(object):
     def i_pickle_you(self, data, path):
         """Transform to pickle and store data"""
         poke_ball = pickle.dumps(data)
-        self.data_center.persist(path + ".pickle", poke_ball)
+        self.data_center.persist(path=path + ".pickle", data=poke_ball)
 
     def evolve(self, path):
         """Retrieve pickle and transform back"""
-        poke_ball = self.data_center.retrieve(path + ".pickle")
+        poke_ball = self.data_center.retrieve(path=path + ".pickle")
         return pickle.loads(poke_ball)
