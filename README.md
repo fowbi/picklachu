@@ -20,7 +20,7 @@ Persisting data:
 from picklachu import Picklachu
 
 with Picklachu(LocalStorage('/tmp/')) as picklachu:
-    picklachu.i_pick_you({'foo':'bar'}, 'foobar')
+    picklachu.i_pickle_you({'foo':'bar'}, 'foobar')
 ```
 
 Retrieving data:
