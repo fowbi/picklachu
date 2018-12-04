@@ -31,7 +31,3 @@ from picklachu import Picklachu
 with Picklachu(LocalStorage('/tmp/')) as picklachu:
     picklachu.evolve('foobar') #  will return {'foo', 'bar'}
 ```
-
-## TODO
-
-- implement S3
