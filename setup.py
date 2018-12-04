@@ -5,7 +5,7 @@ with open("README.md", "r") as handle:
 
 setuptools.setup(
     name="picklachu",
-    version="0.0.1",
+    version="0.0.3",
     author="tobinho",
     author_email="tobi@magier.be",
     description="Pickle data an store it",
